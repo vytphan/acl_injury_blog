@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "ACL Injury Risk in Female Athletes: A Data Science Approach",
+    "section": "",
+    "text": "Anterior cruciate ligament (ACL) injuries occur at two to eight times higher rates in female athletes compared to male athletes, especially in cutting sports like soccer, basketball, and ultimate frisbee (Tjong 2024; Allen 2025). Research shows that 55-70% of ACL injuries happen without contact—during sudden stops, pivots, or single-leg landings after jumps (Chia et al. 2022; Koga et al. 2010). Beyond immediate pain and surgery, ACL injuries often disrupt athletic careers. Athletes who return to sport after ACL reconstruction face elevated reinjury risk, with studies reporting second ACL injury rates ranging from 6% to 30% depending on age and activity level (Wright et al. 2007; Paterno et al. 2012).\nThe challenge is: how can we reduce ACL injury rates in female athletes?\n Photo by UBC Women’s Ultimate ((ubcwultimate?)). Used with permission."
+  },
+  {
+    "objectID": "posts/index.html#movement-and-physical-readiness",
+    "href": "posts/index.html#movement-and-physical-readiness",
+    "title": "ACL Injury Risk in Female Athletes: A Data Science Approach",
+    "section": "1. Movement and Physical Readiness",
+    "text": "1. Movement and Physical Readiness\nThese variables describe how effectively an athlete generates and controls force during high-risk movements:\n\nStrength and balance assessments\nMovement quality during cutting and landing\nAsymmetries between left and right limbs\n\nThese metrics represent baseline physical capacity and tend to change gradually over time."
+  },
+  {
+    "objectID": "posts/index.html#injury-history-and-training-load",
+    "href": "posts/index.html#injury-history-and-training-load",
+    "title": "ACL Injury Risk in Female Athletes: A Data Science Approach",
+    "section": "2. Injury History and Training Load",
+    "text": "2. Injury History and Training Load\n\nPrior injuries to the knee or leg\nPlaying experience\nRecent training and competition volume\n\nPrior injury is a well-established risk factor for future ACL injury. Training load data helps characterize cumulative physical stress and recovery patterns."
+  },
+  {
+    "objectID": "posts/index.html#female-specific-contextual-factors",
+    "href": "posts/index.html#female-specific-contextual-factors",
+    "title": "ACL Injury Risk in Female Athletes: A Data Science Approach",
+    "section": "3. Female-Specific Contextual Factors",
+    "text": "3. Female-Specific Contextual Factors\nThis is what makes the model distinct. Research has demonstrated an association between hormonal fluctuations and ACL injury risk in female athletes (Hewett, Myer, and Ford 2006). Hormonal changes across the menstrual cycle may influence ligament flexibility, neuromuscular coordination, and fatigue perception.\nThe model incorporates two key types of contextual information:\n\na. Hormonal Context (Self-Reported Information)\nSince directly measuring hormone levels requires blood tests and is impractical for regular tracking, the model uses information athletes can report themselves:\n\nMenstrual cycle phase\nHormonal contraceptive use\nCycle regularity\nSymptom severity (cramps, bloating, mood changes)\nPerceived coordination or joint stability\n\nResearch shows these measures can be linked to changes in injury risk patterns (Herzberg et al. 2017).\n\n\nb. Stress and Recovery Status\nShort-term readiness indicators that fluctuate more rapidly:\n\nSleep duration and quality\nDaily stress ratings\nFatigue and muscle soreness\nMood or irritability\nTime since last high-intensity session\nResting heart rate (when available)\n\nBy combining stable physical metrics with dynamic contextual information, the model reflects both an athlete’s baseline risk profile and their current readiness state. This approach acknowledges that identical training activities may carry different risk levels depending on recovery, stress, and hormonal context."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "myPage",
+    "section": "",
+    "text": "Post With Code\n\n\n\nnews\n\ncode\n\nanalysis\n\n\n\n\n\n\n\n\n\nJan 13, 2026\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nJan 10, 2026\n\n\nTristan O’Malley\n\n\n\n\n\n\n\n\n\n\n\n\nACL Injury Risk in Female Athletes: A Data Science Approach\n\n\nHow risk classification models can inform training, recovery, and playing time decisions\n\n\n\n\n\nJan 14, 2025\n\n\nVy Phan\n\n\n\n\n\nNo matching items"
+  }
+]

@@ -1,0 +1,134 @@
+---
+title: "ACL Injury Risk in Female Athletes: A Data Science Approach"
+description: "How risk classification models can inform training, recovery, and playing time decisions"
+author: "Vy Phan"
+date: "01/14/2025"
+bibliography: references.bib
+---
+# The Problem: ACL Injuries in Women's Sports
+
+Anterior cruciate ligament (ACL) injuries occur at two to eight times higher rates in female athletes compared to male athletes, especially in cutting sports like soccer, basketball, and ultimate frisbee [@tjong2024gender; @allen2025npr]. Research shows that 55-70% of ACL injuries happen without contact—during sudden stops, pivots, or single-leg landings after jumps [@chia2022noncontact; @koga2010acl]. Beyond immediate pain and surgery, ACL injuries often disrupt athletic careers. Athletes who return to sport after ACL reconstruction face elevated reinjury risk, with studies reporting second ACL injury rates ranging from 6% to 30% depending on age and activity level [@wright2007second; @paterno2012incidence].
+
+The challenge is: how can we reduce ACL injury rates in female athletes?
+
+![Ultimate frisbee cutting movement](ulti.png)
+Photo by UBC Women's Ultimate ([@ubcwultimate](https://www.instagram.com/ubcwultimate/)). Used with permission.
+
+# Step 1: Gathering Data on Injury Patterns
+
+The first step in addressing any data science problem is collecting relevant data. For ACL injury risk, this includes:
+
+- Historical injury records: When and how injuries occurred
+- Physical performance metrics: Strength, balance, movement quality, and asymmetries between limbs
+- Training and competition data: Volume and intensity of recent activity
+
+By analyzing these datasets, researchers can identify patterns. Common risk factors include movement asymmetries, accumulated fatigue, and deficits in strength or balance. This data helps clarify when and under what conditions injuries are more likely to occur.
+
+# Step 2: The Gap in Existing Research
+
+There is a gap in existing research: most injury prediction models are built primarily on data from male athletes, limiting their effectiveness for female athletes.
+
+Research shows that ACL injury patterns in female athletes differ from those in male populations. Differences in neuromuscular control (how the brain and muscles coordinate movement), how forces are absorbed through joints, and recovery patterns have been documented, highlighting that injury models relying on male-dominated datasets may not work well for female athletes [@vandijk2020injury].
+
+Additionally, many current models focus only on general physical metrics like training load or strength. While important, these approaches treat injury risk as static and overlook how risk changes over time due to physiological and contextual variations.
+
+The problem: We need injury risk models specifically designed for female athletes that account for their unique physiology.
+
+# Step 3: Building a Female-Specific Model
+
+To address this gap, we can develop a risk estimation model that incorporates three types of data:
+
+## 1. Movement and Physical Readiness
+
+These variables describe how effectively an athlete generates and controls force during high-risk movements:
+
+- Strength and balance assessments
+- Movement quality during cutting and landing
+- Asymmetries between left and right limbs
+
+These metrics represent baseline physical capacity and tend to change gradually over time.
+
+##  2. Injury History and Training Load
+
+- Prior injuries to the knee or leg
+- Playing experience
+- Recent training and competition volume
+
+Prior injury is a well-established risk factor for future ACL injury. Training load data helps characterize cumulative physical stress and recovery patterns.
+
+## 3. Female-Specific Contextual Factors
+
+This is what makes the model distinct. Research has demonstrated an association between hormonal fluctuations and ACL injury risk in female athletes [@hewett2007acl]. Hormonal changes across the menstrual cycle may influence ligament flexibility, neuromuscular coordination, and fatigue perception.
+
+The model incorporates two key types of contextual information:
+
+### a. Hormonal Context (Self-Reported Information)
+
+Since directly measuring hormone levels requires blood tests and is impractical for regular tracking, the model uses information athletes can report themselves:
+
+- Menstrual cycle phase
+- Hormonal contraceptive use
+- Cycle regularity
+- Symptom severity (cramps, bloating, mood changes)
+- Perceived coordination or joint stability
+
+Research shows these measures can be linked to changes in injury risk patterns [@herzberg2017].
+
+### b. Stress and Recovery Status
+
+Short-term readiness indicators that fluctuate more rapidly:
+
+- Sleep duration and quality
+- Daily stress ratings
+- Fatigue and muscle soreness
+- Mood or irritability
+- Time since last high-intensity session
+- Resting heart rate (when available)
+
+By combining stable physical metrics with dynamic contextual information, the model reflects both an athlete's baseline risk profile and their current readiness state. This approach acknowledges that identical training activities may carry different risk levels depending on recovery, stress, and hormonal context.
+
+# Step 4: What the Model Produces
+
+The model classifies athletes into risk categories (high, medium, or low risk) rather than predicting whether an injury will definitely occur.
+
+This makes the model more practical and useful as ACL injuries are highly context-dependent, often arising from unpredictable situations like change of direction, collisions, loss of balance, or landing in an awkward angle. Machine learning models can integrate multiple risk factors into probabilistic frameworks, but attempting to predict specific injury events would overstate what the model can do [@kumar2019mlinjury]. Instead, the model provides:
+
+- Risk classification: High, medium, or low risk categories based on current physical status, recovery state, and hormonal context
+- Decision support: Information to guide preventative strategies, not diagnostic certainty
+- Adaptability: Risk categories that update based on changing inputs like training load, sleep, and menstrual cycle phase
+
+# Practical Applications
+
+These risk classifications help inform:
+
+- Training adjustments: If an athlete is in a high-risk period, reduce high-intensity cutting drills, plyometrics (jump training), or full-contact scrimmages
+- Movement quality focus: During medium-risk periods, spend extra time on landing mechanics, balance exercises, and controlled cutting practice rather than high-speed game situations
+- Playing time decisions: Consider limiting play time or competitions during high-risk windows, or avoiding back-to-back intense matches
+- Recovery priority: When stress and fatigue are elevated, ensure at least one full rest day, prioritize sleep (7-9 hours), and avoid scheduling hard practices on consecutive days
+
+The model functions as a decision-support tool, not a diagnostic system. It accepts uncertainty while still offering actionable guidance.
+
+# Conclusion
+
+ACL injuries are among the most serious challenges in women’s sports, often requiring surgery, disrupting athletic careers, and increasing the risk of reinjury. While the exact timing of an ACL injury cannot be predicted, periods of elevated risk can be identified.
+
+This model shifts injury management from reactive treatment to proactive prevention by estimating an athlete’s current injury risk rather than predicting specific injury events. It integrates movement assessments, injury history, training load, recovery status, and female-specific factors such as menstrual cycle phase to classify risk as low, medium, or high.
+
+These risk estimates support practical decision-making. During higher-risk periods, coaches can adjust training intensity, athletes can prioritize recovery and movement quality, and teams can make more informed choices about practice and playing time.
+
+This fulfills the model's goal: giving coaches and athletes the information they need to make smarter decisions about training, recovery, and participation. By flagging high-risk periods, the model enables proactive prevention—adjusting workloads and prioritizing movement quality before injury occurs. Used alongside clinical expertise and coaching judgment, this risk-based approach provides a practical path toward reducing ACL injury rates in women's sports.
+
+# References
+
+1. Tjong, V. (2024). "Why Women Have More ACL Injuries Than Men." Northwestern Medicine. https://www.nm.org/healthbeat/healthy-tips/fitness/why-women-have-more-acl-injuries-than-men
+2. Allen, C. (2025). "Why women athletes face higher ACL injury risk than men." NPR.
+3. Chia, L., et al. (2022). "Non-contact Anterior Cruciate Ligament Injury Epidemiology in Team-Ball Sports: A Systematic Review with Meta-analysis." Sports Medicine, 52, 2763-2775.
+4. Koga, H., et al. (2010). "Mechanisms for noncontact anterior cruciate ligament injuries: knee joint kinematics in 10 injury situations from female team handball and basketball." American Journal of Sports Medicine, 38(11), 2218-2225.
+5. Wright, R.W., et al. (2007). "Ipsilateral Graft and Contralateral ACL Rupture at Five Years or More Following ACL Reconstruction: A Systematic Review." Journal of Bone and Joint Surgery, 93(12), 1159-1165.
+6. Paterno, M.V., et al. (2012). "Incidence of Contralateral and Ipsilateral Anterior Cruciate Ligament (ACL) Injury After Primary ACL Reconstruction and Return to Sport." Clinical Journal of Sport Medicine, 22(2), 116-121.
+7. van Dijk, C.N., et al. (2020). "Injury mechanisms and prevention strategies in female athletes." Sports Medicine, 50, 2041-2061.
+8. Kumar, R., et al. (2019). "Machine learning approaches to injury risk prediction in sport." Journal of Sports Analytics, 5(4), 277-294.
+9. Hewett, T.E., Myer, G.D., & Ford, K.R. (2006). "Anterior cruciate ligament injuries in female athletes: Part 1, mechanisms and risk factors." The American Journal of Sports Medicine, 34(2), 299-311.
+10. Herzberg, S.D., et al. (2017). "The Effect of Menstrual Cycle and Contraceptives on ACL Injuries and Laxity: A Systematic Review and Meta-analysis." Orthopaedic Journal of Sports Medicine, 5(7).
+
+
